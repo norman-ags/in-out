@@ -56,14 +56,14 @@ export class App {
         }
       }
 
-    //   // Schedule automatic clock-in (when computer starts)
-    //   this.schedulerService.scheduleClockIn();
+      // Schedule automatic clock-in (when computer starts)
+      this.schedulerService.scheduleClockIn();
 
-    //   // Schedule automatic clock-out (after work hours)
-    //   this.schedulerService.scheduleClockOut();
+      // Schedule automatic clock-out (after work hours)
+      this.schedulerService.scheduleClockOut();
 
-    //   // Start periodic checks
-    //   this.schedulerService.startPeriodicCheck();
+      // Start periodic checks
+      this.schedulerService.startPeriodicCheck();
 
       this.logger.info('Attendance automation is now running...');
 

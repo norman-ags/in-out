@@ -5,6 +5,7 @@ import { EmaptaIntegrationService } from './services/EmaptaIntegrationService';
 import { SchedulerService } from './services/SchedulerService';
 import { OfflineService } from './services/OfflineService';
 import { ConfigService } from './services/ConfigService';
+import { TokenService } from './services/TokenService';
 
 async function main(): Promise<void> {
   try {
@@ -15,7 +16,8 @@ async function main(): Promise<void> {
     // Initialize services
     const logger = new LoggerService(config.logging.level, config.logging.filePath);
     const connectionService = new ConnectionService(logger);
-    const emaptaService = new EmaptaIntegrationService(logger, config);
+    const tokenService = new TokenService(logger);
+    const emaptaService = new EmaptaIntegrationService(logger, config, tokenService);
     const offlineService = new OfflineService(logger, config.offline.dataPath);
     const schedulerService = new SchedulerService(
       logger,

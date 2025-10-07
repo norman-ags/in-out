@@ -1,10 +1,10 @@
 export class AttendanceStatus {
   static readonly RESTDAY = 'Rest Day';
-  static readonly ON_LEAVE = 'On Leave';
+  static readonly ON_LEAVE = 'On leave';  // Updated to match API response
   static readonly COMPLETED = 'Completed';
   static readonly HOLIDAY = 'Holiday';
   static readonly IN_PROGRESS = 'In Progress';
-  static readonly NOT_STARTED = 'Not Started';
+  static readonly NOT_STARTED = 'Not started';  // Updated to match API response
 }
 
 export class AttendanceItem {

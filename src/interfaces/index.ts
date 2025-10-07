@@ -33,6 +33,10 @@ export interface IOfflineService {
   processOfflineActions(): Promise<void>;
 }
 
+export interface ITokenService {
+  updateTokens(accessToken: string, refreshToken: string): Promise<boolean>;
+}
+
 export interface AttendanceDetails {
   status: string;
   dateTimeIn: string | null;
